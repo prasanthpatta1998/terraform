@@ -27,3 +27,21 @@ while [ $num -gt 0 ]; do
     echo "Countdown: $num"
     num=$((num - 1 ))
 done
+
+function greet {
+    echo "Hello, $1 $2 $3!"
+}
+
+greet "World" "Developer" "User"
+
+function factorial {
+    if [ $1 -le 1 ]; then
+        echo 1
+    else
+        local temp=$(( $1 -1))
+        local result=$(factorial $temp)
+        echo $(( $1 * result ))
+    fi
+}
+
+factorial 5

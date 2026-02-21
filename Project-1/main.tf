@@ -191,7 +191,7 @@ resource "aws_lb_target_group" "tf_alb_tg" {
     target_type = "instance"
 
     health_check {
-      path = "/login"
+      path = "/"
       interval = 30
       timeout = 5
       healthy_threshold = 2
